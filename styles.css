@@ -64,16 +64,15 @@ body {
 
 }.poster {
     margin-top: -130px;
-    width: 600px;
     height: 900px;
     padding: 10px;
-    margin-bottom: auto;
     text-align: center;
     backdrop-filter: blur(4px);
     position: relative;
     z-index: 1;
     align-items: center;
 }
+
 .poster::before, .poster form ::before {
     content: "";
     position: absolute;
@@ -154,4 +153,9 @@ rgb(77, 45, 34) 100%
 border: 2px black solid;
 border-radius: 5px;
 margin-bottom: 5px;
+}
+@media (max-width: 450px) {
+    .poster {
+        transform: scale(0.4);
+    }
 }
