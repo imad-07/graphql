@@ -83,7 +83,10 @@ function createWantedPosterback(name, price, city = "Khouribga", ratio, level){
     f.remove()
     document.getElementById("poster-container").appendChild(createWantedPosterFront(name, price, city = "Khouribga", ratio, level))
     })
-    element.querySelector('.poster').prepend(svg)
+    let holder = document.createElement("div")
+    holder.classList.add("holder")
+    holder.appendChild(svg)
+    element.querySelector('.poster').prepend(holder)
     element.querySelector('.poster').prepend(csvg)
     element.querySelector('.poster').appendChild(quit())
     return element
